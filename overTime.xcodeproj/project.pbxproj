@@ -30,11 +30,6 @@
 		791B454D1D4A3EB00027C519 /* CHWWorkOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B454C1D4A3EB00027C519 /* CHWWorkOffViewController.m */; };
 		791B45511D4A3ED80027C519 /* CHWWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45501D4A3ED80027C519 /* CHWWorkViewController.m */; };
 		791B45541D4A3EE40027C519 /* CHWWorkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45531D4A3EE40027C519 /* CHWWorkModel.m */; };
-		791B45621D4A40D40027C519 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45591D4A40D40027C519 /* FMDatabase.m */; };
-		791B45631D4A40D40027C519 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B455B1D4A40D40027C519 /* FMDatabaseAdditions.m */; };
-		791B45641D4A40D40027C519 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B455D1D4A40D40027C519 /* FMDatabasePool.m */; };
-		791B45651D4A40D40027C519 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B455F1D4A40D40027C519 /* FMDatabaseQueue.m */; };
-		791B45661D4A40D40027C519 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45611D4A40D40027C519 /* FMResultSet.m */; };
 		791B456A1D4A40F40027C519 /* ContentDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45691D4A40F40027C519 /* ContentDatabase.m */; };
 		791B456C1D4A412F0027C519 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 791B456B1D4A412F0027C519 /* libsqlite3.tbd */; };
 		791B456F1D4A44970027C519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791B456D1D4A44970027C519 /* Main.storyboard */; };
@@ -106,16 +101,6 @@
 		791B45501D4A3ED80027C519 /* CHWWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWWorkViewController.m; path = WorkViewController/CHWWorkViewController.m; sourceTree = "<group>"; };
 		791B45521D4A3EE40027C519 /* CHWWorkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWWorkModel.h; path = WorkViewController/model/CHWWorkModel.h; sourceTree = "<group>"; };
 		791B45531D4A3EE40027C519 /* CHWWorkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWWorkModel.m; path = WorkViewController/model/CHWWorkModel.m; sourceTree = "<group>"; };
-		791B45581D4A40D40027C519 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		791B45591D4A40D40027C519 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		791B455A1D4A40D40027C519 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		791B455B1D4A40D40027C519 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		791B455C1D4A40D40027C519 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		791B455D1D4A40D40027C519 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		791B455E1D4A40D40027C519 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		791B455F1D4A40D40027C519 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		791B45601D4A40D40027C519 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		791B45611D4A40D40027C519 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		791B45681D4A40F40027C519 /* ContentDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentDatabase.h; path = database/ContentDatabase.h; sourceTree = "<group>"; };
 		791B45691D4A40F40027C519 /* ContentDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentDatabase.m; path = database/ContentDatabase.m; sourceTree = "<group>"; };
 		791B456B1D4A412F0027C519 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -328,7 +313,6 @@
 		791B454A1D4A3E8D0027C519 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				791B45571D4A40C60027C519 /* FMDB */,
 				791B45671D4A40DB0027C519 /* Database */,
 				791B45431D4A3E310027C519 /* DCPathButton */,
 			);
@@ -361,23 +345,6 @@
 				791B45531D4A3EE40027C519 /* CHWWorkModel.m */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		791B45571D4A40C60027C519 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				791B45581D4A40D40027C519 /* FMDatabase.h */,
-				791B45591D4A40D40027C519 /* FMDatabase.m */,
-				791B455A1D4A40D40027C519 /* FMDatabaseAdditions.h */,
-				791B455B1D4A40D40027C519 /* FMDatabaseAdditions.m */,
-				791B455C1D4A40D40027C519 /* FMDatabasePool.h */,
-				791B455D1D4A40D40027C519 /* FMDatabasePool.m */,
-				791B455E1D4A40D40027C519 /* FMDatabaseQueue.h */,
-				791B455F1D4A40D40027C519 /* FMDatabaseQueue.m */,
-				791B45601D4A40D40027C519 /* FMResultSet.h */,
-				791B45611D4A40D40027C519 /* FMResultSet.m */,
-			);
-			name = FMDB;
 			sourceTree = "<group>";
 		};
 		791B45671D4A40DB0027C519 /* Database */ = {
@@ -589,10 +556,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				791B452F1D4A3D330027C519 /* CHWSettingViewController.m in Sources */,
-				791B45621D4A40D40027C519 /* FMDatabase.m in Sources */,
 				791B451F1D4A3C0C0027C519 /* CHWViewController.m in Sources */,
 				791B45331D4A3D5D0027C519 /* CHWTimeLineViewController.m in Sources */,
-				791B45641D4A40D40027C519 /* FMDatabasePool.m in Sources */,
 				791B45271D4A3C710027C519 /* NSString+CompareDate.m in Sources */,
 				791B454D1D4A3EB00027C519 /* CHWWorkOffViewController.m in Sources */,
 				791B45411D4A3DE90027C519 /* ACTimeScroller.m in Sources */,
@@ -605,13 +570,10 @@
 				791B45481D4A3E450027C519 /* DCPathButton.m in Sources */,
 				791B44EC1D47AED10027C519 /* AppDelegate.m in Sources */,
 				791B45491D4A3E450027C519 /* DCPathItemButton.m in Sources */,
-				791B45661D4A40D40027C519 /* FMResultSet.m in Sources */,
 				791B45511D4A3ED80027C519 /* CHWWorkViewController.m in Sources */,
 				791B44E91D47AED10027C519 /* main.m in Sources */,
 				791B456A1D4A40F40027C519 /* ContentDatabase.m in Sources */,
-				791B45651D4A40D40027C519 /* FMDatabaseQueue.m in Sources */,
 				791B45541D4A3EE40027C519 /* CHWWorkModel.m in Sources */,
-				791B45631D4A40D40027C519 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

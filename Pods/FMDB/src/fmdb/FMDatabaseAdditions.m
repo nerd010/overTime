@@ -8,6 +8,13 @@
 
 #import "FMDatabase.h"
 #import "FMDatabaseAdditions.h"
+#import "TargetConditionals.h"
+
+#if FMDB_SQLITE_STANDALONE
+#import <sqlite3/sqlite3.h>
+#else
+#import <sqlite3.h>
+#endif
 
 @interface FMDatabase (PrivateStuff)
 - (FMResultSet *)executeQuery:(NSString *)sql withArgumentsInArray:(NSArray*)arrayArgs orDictionary:(NSDictionary *)dictionaryArgs orVAList:(va_list)args;
@@ -89,7 +96,7 @@ return ret;
 - (FMResultSet*)getTableSchema:(NSString*)tableName {
     
     //result colums: cid[INTEGER], name,type [STRING], notnull[INTEGER], dflt_value[],pk[INTEGER]
-    FMResultSet *rs = [self executeQuery:[NSString stringWithFormat: @"PRAGMA table_info('%@')", tableName]];
+    FMResultSet *rs = [self executeQuery:[NSString stringWithFormat: @"pragma table_info('%@')", tableName]];
     
     return rs;
 }
@@ -117,9 +124,10 @@ return ret;
     return returnBool;
 }
 
-#if SQLITE_VERSION_NUMBER >= 3007017
+
+
 - (uint32_t)applicationID {
-    
+#if SQLITE_VERSION_NUMBER >= 3007017
     uint32_t r = 0;
     
     FMResultSet *rs = [self executeQuery:@"pragma application_id"];
@@ -131,17 +139,30 @@ return ret;
     [rs close];
     
     return r;
+#else
+    NSString *errorMessage = NSLocalizedString(@"Application ID functions require SQLite 3.7.17", nil);
+    if (self.logsErrors) NSLog(@"%@", errorMessage);
+    return 0;
+#endif
 }
 
 - (void)setApplicationID:(uint32_t)appID {
-    NSString *query = [NSString stringWithFormat:@"PRAGMA application_id=%d", appID];
+#if SQLITE_VERSION_NUMBER >= 3007017
+    NSString *query = [NSString stringWithFormat:@"pragma application_id=%d", appID];
     FMResultSet *rs = [self executeQuery:query];
     [rs next];
     [rs close];
+#else
+    NSString *errorMessage = NSLocalizedString(@"Application ID functions require SQLite 3.7.17", nil);
+    if (self.logsErrors) NSLog(@"%@", errorMessage);
+#endif
 }
 
+
 #if TARGET_OS_MAC && !TARGET_OS_IPHONE
+
 - (NSString*)applicationIDString {
+#if SQLITE_VERSION_NUMBER >= 3007017
     NSString *s = NSFileTypeForHFSTypeCode([self applicationID]);
     
     assert([s length] == 6);
@@ -150,22 +171,47 @@ return ret;
     
     
     return s;
-    
+#else
+    NSString *errorMessage = NSLocalizedString(@"Application ID functions require SQLite 3.7.17", nil);
+    if (self.logsErrors) NSLog(@"%@", errorMessage);
+    return nil;
+#endif
 }
 
-
-
 - (void)setApplicationIDString:(NSString*)s {
-    
+#if SQLITE_VERSION_NUMBER >= 3007017
     if ([s length] != 4) {
         NSLog(@"setApplicationIDString: string passed is not exactly 4 chars long. (was %ld)", [s length]);
     }
     
     [self setApplicationID:NSHFSTypeCodeFromFileType([NSString stringWithFormat:@"'%@'", s])];
+#else
+    NSString *errorMessage = NSLocalizedString(@"Application ID functions require SQLite 3.7.17", nil);
+    if (self.logsErrors) NSLog(@"%@", errorMessage);
+#endif
 }
 
 #endif
-#endif
+
+- (uint32_t)userVersion {
+    uint32_t r = 0;
+    
+    FMResultSet *rs = [self executeQuery:@"pragma user_version"];
+    
+    if ([rs next]) {
+        r = (uint32_t)[rs longLongIntForColumnIndex:0];
+    }
+    
+    [rs close];
+    return r;
+}
+
+- (void)setUserVersion:(uint32_t)version {
+    NSString *query = [NSString stringWithFormat:@"pragma user_version = %d", version];
+    FMResultSet *rs = [self executeQuery:query];
+    [rs next];
+    [rs close];
+}
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-implementations"
@@ -176,32 +222,19 @@ return ret;
 
 #pragma clang diagnostic pop
 
+
 - (BOOL)validateSQL:(NSString*)sql error:(NSError**)error {
     sqlite3_stmt *pStmt = NULL;
     BOOL validationSucceeded = YES;
-    BOOL keepTrying = YES;
-    int numberOfRetries = 0;
     
-    while (keepTrying == YES) {
-        keepTrying = NO;
-        int rc = sqlite3_prepare_v2(_db, [sql UTF8String], -1, &pStmt, 0);
-        if (rc == SQLITE_BUSY || rc == SQLITE_LOCKED) {
-            keepTrying = YES;
-            usleep(20);
-            
-            if (_busyRetryTimeout && (numberOfRetries++ > _busyRetryTimeout)) {
-                NSLog(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [self databasePath]);
-                NSLog(@"Database busy");
-            }          
-        } 
-        else if (rc != SQLITE_OK) {
-            validationSucceeded = NO;
-            if (error) {
-                *error = [NSError errorWithDomain:NSCocoaErrorDomain 
-                                             code:[self lastErrorCode]
-                                         userInfo:[NSDictionary dictionaryWithObject:[self lastErrorMessage] 
-                                                                              forKey:NSLocalizedDescriptionKey]];
-            }
+    int rc = sqlite3_prepare_v2(_db, [sql UTF8String], -1, &pStmt, 0);
+    if (rc != SQLITE_OK) {
+        validationSucceeded = NO;
+        if (error) {
+            *error = [NSError errorWithDomain:NSCocoaErrorDomain
+                                         code:[self lastErrorCode]
+                                     userInfo:[NSDictionary dictionaryWithObject:[self lastErrorMessage]
+                                                                          forKey:NSLocalizedDescriptionKey]];
         }
     }
     
