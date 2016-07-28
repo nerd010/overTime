@@ -16,29 +16,19 @@
     timeInterval = -timeInterval;
     long temp = 0;
     NSString *result;
-    if (timeInterval < 60) {
+    if (timeInterval < 60)
         result = [NSString stringWithFormat:@"work for %ld seconds",temp];
-    }
-    else if((temp = timeInterval/60) <60){
-        
+    else if((temp = timeInterval/60) <60)
         result = [NSString stringWithFormat:@"work for %ld minute",temp];
-    }
-    
-    else if((temp = temp/60) <24){
+    else if((temp = temp/60) <24)
         result = [NSString stringWithFormat:@"%ld",temp];
-    }
-    
-    else if((temp = temp/24) <30){
+    else if((temp = temp/24) <30)
         result = [NSString stringWithFormat:@"%ld",temp];
-    }
-    
-    else if((temp = temp/30) <12){
+    else if((temp = temp/30) <12)
         result = [NSString stringWithFormat:@"%ld",temp];
-    }
-    else{
+    else
         temp = temp/12;
         result = [NSString stringWithFormat:@"%ld",temp];
-    }
     
     return  result;
 }

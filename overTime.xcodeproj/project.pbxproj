@@ -15,6 +15,29 @@
 		791B44F71D47AED10027C519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791B44F51D47AED10027C519 /* LaunchScreen.storyboard */; };
 		791B45021D47AED10027C519 /* overTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45011D47AED10027C519 /* overTimeTests.m */; };
 		791B450D1D47AED10027C519 /* overTimeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B450C1D47AED10027C519 /* overTimeUITests.m */; };
+		791B451E1D4A3C0C0027C519 /* CHWTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B451B1D4A3C0C0027C519 /* CHWTabbarViewController.m */; };
+		791B451F1D4A3C0C0027C519 /* CHWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B451D1D4A3C0C0027C519 /* CHWViewController.m */; };
+		791B45231D4A3C3D0027C519 /* CHWContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45221D4A3C3D0027C519 /* CHWContentViewController.m */; };
+		791B45271D4A3C710027C519 /* NSString+CompareDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45261D4A3C710027C519 /* NSString+CompareDate.m */; };
+		791B452B1D4A3CFF0027C519 /* ContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B452A1D4A3CFF0027C519 /* ContentModel.m */; };
+		791B452F1D4A3D330027C519 /* CHWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B452E1D4A3D330027C519 /* CHWSettingViewController.m */; };
+		791B45331D4A3D5D0027C519 /* CHWTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45321D4A3D5D0027C519 /* CHWTimeLineViewController.m */; };
+		791B45361D4A3D6F0027C519 /* CHWTimeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45351D4A3D6F0027C519 /* CHWTimeTableView.m */; };
+		791B453A1D4A3D7C0027C519 /* CHWTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45381D4A3D7C0027C519 /* CHWTimeTableViewCell.m */; };
+		791B453B1D4A3D7C0027C519 /* CHWTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 791B45391D4A3D7C0027C519 /* CHWTimeTableViewCell.xib */; };
+		791B45411D4A3DE90027C519 /* ACTimeScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45401D4A3DE90027C519 /* ACTimeScroller.m */; };
+		791B45481D4A3E450027C519 /* DCPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45451D4A3E450027C519 /* DCPathButton.m */; };
+		791B45491D4A3E450027C519 /* DCPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45471D4A3E450027C519 /* DCPathItemButton.m */; };
+		791B454D1D4A3EB00027C519 /* CHWWorkOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B454C1D4A3EB00027C519 /* CHWWorkOffViewController.m */; };
+		791B45511D4A3ED80027C519 /* CHWWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45501D4A3ED80027C519 /* CHWWorkViewController.m */; };
+		791B45541D4A3EE40027C519 /* CHWWorkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45531D4A3EE40027C519 /* CHWWorkModel.m */; };
+		791B45621D4A40D40027C519 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45591D4A40D40027C519 /* FMDatabase.m */; };
+		791B45631D4A40D40027C519 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B455B1D4A40D40027C519 /* FMDatabaseAdditions.m */; };
+		791B45641D4A40D40027C519 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B455D1D4A40D40027C519 /* FMDatabasePool.m */; };
+		791B45651D4A40D40027C519 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B455F1D4A40D40027C519 /* FMDatabaseQueue.m */; };
+		791B45661D4A40D40027C519 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45611D4A40D40027C519 /* FMResultSet.m */; };
+		791B456A1D4A40F40027C519 /* ContentDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45691D4A40F40027C519 /* ContentDatabase.m */; };
+		791B456C1D4A412F0027C519 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 791B456B1D4A412F0027C519 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +74,50 @@
 		791B45081D47AED10027C519 /* overTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = overTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		791B450C1D47AED10027C519 /* overTimeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = overTimeUITests.m; sourceTree = "<group>"; };
 		791B450E1D47AED10027C519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		791B451A1D4A3C0C0027C519 /* CHWTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWTabbarViewController.h; path = TabbarController/CHWTabbarViewController.h; sourceTree = "<group>"; };
+		791B451B1D4A3C0C0027C519 /* CHWTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWTabbarViewController.m; path = TabbarController/CHWTabbarViewController.m; sourceTree = "<group>"; };
+		791B451C1D4A3C0C0027C519 /* CHWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWViewController.h; path = TabbarController/CHWViewController.h; sourceTree = "<group>"; };
+		791B451D1D4A3C0C0027C519 /* CHWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWViewController.m; path = TabbarController/CHWViewController.m; sourceTree = "<group>"; };
+		791B45211D4A3C3D0027C519 /* CHWContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWContentViewController.h; path = ContentViewController/CHWContentViewController.h; sourceTree = "<group>"; };
+		791B45221D4A3C3D0027C519 /* CHWContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWContentViewController.m; path = ContentViewController/CHWContentViewController.m; sourceTree = "<group>"; };
+		791B45251D4A3C710027C519 /* NSString+CompareDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+CompareDate.h"; path = "Expand/category/NSString+CompareDate.h"; sourceTree = "<group>"; };
+		791B45261D4A3C710027C519 /* NSString+CompareDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+CompareDate.m"; path = "Expand/category/NSString+CompareDate.m"; sourceTree = "<group>"; };
+		791B45291D4A3CFF0027C519 /* ContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentModel.h; path = ContentViewController/model/ContentModel.h; sourceTree = "<group>"; };
+		791B452A1D4A3CFF0027C519 /* ContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentModel.m; path = ContentViewController/model/ContentModel.m; sourceTree = "<group>"; };
+		791B452D1D4A3D330027C519 /* CHWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWSettingViewController.h; path = SettingViewController/CHWSettingViewController.h; sourceTree = "<group>"; };
+		791B452E1D4A3D330027C519 /* CHWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWSettingViewController.m; path = SettingViewController/CHWSettingViewController.m; sourceTree = "<group>"; };
+		791B45311D4A3D5D0027C519 /* CHWTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWTimeLineViewController.h; path = TimelineViewController/CHWTimeLineViewController.h; sourceTree = "<group>"; };
+		791B45321D4A3D5D0027C519 /* CHWTimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWTimeLineViewController.m; path = TimelineViewController/CHWTimeLineViewController.m; sourceTree = "<group>"; };
+		791B45341D4A3D6F0027C519 /* CHWTimeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWTimeTableView.h; path = TimelineViewController/view/CHWTimeTableView.h; sourceTree = "<group>"; };
+		791B45351D4A3D6F0027C519 /* CHWTimeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWTimeTableView.m; path = TimelineViewController/view/CHWTimeTableView.m; sourceTree = "<group>"; };
+		791B45371D4A3D7C0027C519 /* CHWTimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWTimeTableViewCell.h; path = TimelineViewController/view/cell/CHWTimeTableViewCell.h; sourceTree = "<group>"; };
+		791B45381D4A3D7C0027C519 /* CHWTimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWTimeTableViewCell.m; path = TimelineViewController/view/cell/CHWTimeTableViewCell.m; sourceTree = "<group>"; };
+		791B45391D4A3D7C0027C519 /* CHWTimeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CHWTimeTableViewCell.xib; path = TimelineViewController/view/cell/CHWTimeTableViewCell.xib; sourceTree = "<group>"; };
+		791B453F1D4A3DE90027C519 /* ACTimeScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACTimeScroller.h; path = TimeScroller/ACTimeScroller.h; sourceTree = "<group>"; };
+		791B45401D4A3DE90027C519 /* ACTimeScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACTimeScroller.m; path = TimeScroller/ACTimeScroller.m; sourceTree = "<group>"; };
+		791B45441D4A3E450027C519 /* DCPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCPathButton.h; path = Vender/DCPathButton/Classes/DCPathButton.h; sourceTree = "<group>"; };
+		791B45451D4A3E450027C519 /* DCPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCPathButton.m; path = Vender/DCPathButton/Classes/DCPathButton.m; sourceTree = "<group>"; };
+		791B45461D4A3E450027C519 /* DCPathItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCPathItemButton.h; path = Vender/DCPathButton/Classes/DCPathItemButton.h; sourceTree = "<group>"; };
+		791B45471D4A3E450027C519 /* DCPathItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCPathItemButton.m; path = Vender/DCPathButton/Classes/DCPathItemButton.m; sourceTree = "<group>"; };
+		791B454B1D4A3EB00027C519 /* CHWWorkOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWWorkOffViewController.h; path = WorkoffViewController/CHWWorkOffViewController.h; sourceTree = "<group>"; };
+		791B454C1D4A3EB00027C519 /* CHWWorkOffViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWWorkOffViewController.m; path = WorkoffViewController/CHWWorkOffViewController.m; sourceTree = "<group>"; };
+		791B454F1D4A3ED80027C519 /* CHWWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWWorkViewController.h; path = WorkViewController/CHWWorkViewController.h; sourceTree = "<group>"; };
+		791B45501D4A3ED80027C519 /* CHWWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWWorkViewController.m; path = WorkViewController/CHWWorkViewController.m; sourceTree = "<group>"; };
+		791B45521D4A3EE40027C519 /* CHWWorkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHWWorkModel.h; path = WorkViewController/model/CHWWorkModel.h; sourceTree = "<group>"; };
+		791B45531D4A3EE40027C519 /* CHWWorkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHWWorkModel.m; path = WorkViewController/model/CHWWorkModel.m; sourceTree = "<group>"; };
+		791B45581D4A40D40027C519 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		791B45591D4A40D40027C519 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		791B455A1D4A40D40027C519 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		791B455B1D4A40D40027C519 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		791B455C1D4A40D40027C519 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		791B455D1D4A40D40027C519 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		791B455E1D4A40D40027C519 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		791B455F1D4A40D40027C519 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		791B45601D4A40D40027C519 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		791B45611D4A40D40027C519 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		791B45681D4A40F40027C519 /* ContentDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentDatabase.h; path = database/ContentDatabase.h; sourceTree = "<group>"; };
+		791B45691D4A40F40027C519 /* ContentDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentDatabase.m; path = database/ContentDatabase.m; sourceTree = "<group>"; };
+		791B456B1D4A412F0027C519 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791B456C1D4A412F0027C519 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +149,7 @@
 		791B44DB1D47AED10027C519 = {
 			isa = PBXGroup;
 			children = (
+				791B456B1D4A412F0027C519 /* libsqlite3.tbd */,
 				791B44E61D47AED10027C519 /* overTime */,
 				791B45001D47AED10027C519 /* overTimeTests */,
 				791B450B1D47AED10027C519 /* overTimeUITests */,
@@ -105,6 +174,16 @@
 				791B44EB1D47AED10027C519 /* AppDelegate.m */,
 				791B44ED1D47AED10027C519 /* ViewController.h */,
 				791B44EE1D47AED10027C519 /* ViewController.m */,
+				791B45571D4A40C60027C519 /* FMDB */,
+				791B45551D4A3EE90027C519 /* CHWWorkViewController */,
+				791B454E1D4A3EB30027C519 /* CHWWorkOffViewController */,
+				791B454A1D4A3E8D0027C519 /* Vender */,
+				791B45421D4A3DEC0027C519 /* ACTimeScroller */,
+				791B453C1D4A3D840027C519 /* CHWTimeLineViewController */,
+				791B45301D4A3D380027C519 /* CHWSettingViewController */,
+				791B45281D4A3C750027C519 /* Expend */,
+				791B45241D4A3C420027C519 /* CHWContentViewController */,
+				791B45201D4A3C130027C519 /* CHWTabbarViewController */,
 				791B44F01D47AED10027C519 /* Main.storyboard */,
 				791B44F31D47AED10027C519 /* Assets.xcassets */,
 				791B44F51D47AED10027C519 /* LaunchScreen.storyboard */,
@@ -138,6 +217,167 @@
 				791B450E1D47AED10027C519 /* Info.plist */,
 			);
 			path = overTimeUITests;
+			sourceTree = "<group>";
+		};
+		791B45201D4A3C130027C519 /* CHWTabbarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				791B451A1D4A3C0C0027C519 /* CHWTabbarViewController.h */,
+				791B451B1D4A3C0C0027C519 /* CHWTabbarViewController.m */,
+				791B451C1D4A3C0C0027C519 /* CHWViewController.h */,
+				791B451D1D4A3C0C0027C519 /* CHWViewController.m */,
+			);
+			name = CHWTabbarViewController;
+			sourceTree = "<group>";
+		};
+		791B45241D4A3C420027C519 /* CHWContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				791B452C1D4A3D0B0027C519 /* Model */,
+				791B45211D4A3C3D0027C519 /* CHWContentViewController.h */,
+				791B45221D4A3C3D0027C519 /* CHWContentViewController.m */,
+			);
+			name = CHWContentViewController;
+			sourceTree = "<group>";
+		};
+		791B45281D4A3C750027C519 /* Expend */ = {
+			isa = PBXGroup;
+			children = (
+				791B45251D4A3C710027C519 /* NSString+CompareDate.h */,
+				791B45261D4A3C710027C519 /* NSString+CompareDate.m */,
+			);
+			name = Expend;
+			sourceTree = "<group>";
+		};
+		791B452C1D4A3D0B0027C519 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				791B45291D4A3CFF0027C519 /* ContentModel.h */,
+				791B452A1D4A3CFF0027C519 /* ContentModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		791B45301D4A3D380027C519 /* CHWSettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				791B452D1D4A3D330027C519 /* CHWSettingViewController.h */,
+				791B452E1D4A3D330027C519 /* CHWSettingViewController.m */,
+			);
+			name = CHWSettingViewController;
+			sourceTree = "<group>";
+		};
+		791B453C1D4A3D840027C519 /* CHWTimeLineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				791B453D1D4A3D9F0027C519 /* CHWTimeTableView */,
+				791B45311D4A3D5D0027C519 /* CHWTimeLineViewController.h */,
+				791B45321D4A3D5D0027C519 /* CHWTimeLineViewController.m */,
+			);
+			name = CHWTimeLineViewController;
+			sourceTree = "<group>";
+		};
+		791B453D1D4A3D9F0027C519 /* CHWTimeTableView */ = {
+			isa = PBXGroup;
+			children = (
+				791B453E1D4A3DB60027C519 /* Cell */,
+				791B45341D4A3D6F0027C519 /* CHWTimeTableView.h */,
+				791B45351D4A3D6F0027C519 /* CHWTimeTableView.m */,
+			);
+			name = CHWTimeTableView;
+			sourceTree = "<group>";
+		};
+		791B453E1D4A3DB60027C519 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				791B45371D4A3D7C0027C519 /* CHWTimeTableViewCell.h */,
+				791B45381D4A3D7C0027C519 /* CHWTimeTableViewCell.m */,
+				791B45391D4A3D7C0027C519 /* CHWTimeTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		791B45421D4A3DEC0027C519 /* ACTimeScroller */ = {
+			isa = PBXGroup;
+			children = (
+				791B453F1D4A3DE90027C519 /* ACTimeScroller.h */,
+				791B45401D4A3DE90027C519 /* ACTimeScroller.m */,
+			);
+			name = ACTimeScroller;
+			sourceTree = "<group>";
+		};
+		791B45431D4A3E310027C519 /* DCPathButton */ = {
+			isa = PBXGroup;
+			children = (
+				791B45441D4A3E450027C519 /* DCPathButton.h */,
+				791B45451D4A3E450027C519 /* DCPathButton.m */,
+				791B45461D4A3E450027C519 /* DCPathItemButton.h */,
+				791B45471D4A3E450027C519 /* DCPathItemButton.m */,
+			);
+			name = DCPathButton;
+			sourceTree = "<group>";
+		};
+		791B454A1D4A3E8D0027C519 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				791B45671D4A40DB0027C519 /* Database */,
+				791B45431D4A3E310027C519 /* DCPathButton */,
+			);
+			name = Vender;
+			sourceTree = "<group>";
+		};
+		791B454E1D4A3EB30027C519 /* CHWWorkOffViewController */ = {
+			isa = PBXGroup;
+			children = (
+				791B454B1D4A3EB00027C519 /* CHWWorkOffViewController.h */,
+				791B454C1D4A3EB00027C519 /* CHWWorkOffViewController.m */,
+			);
+			name = CHWWorkOffViewController;
+			sourceTree = "<group>";
+		};
+		791B45551D4A3EE90027C519 /* CHWWorkViewController */ = {
+			isa = PBXGroup;
+			children = (
+				791B45561D4A3F0D0027C519 /* Model */,
+				791B454F1D4A3ED80027C519 /* CHWWorkViewController.h */,
+				791B45501D4A3ED80027C519 /* CHWWorkViewController.m */,
+			);
+			name = CHWWorkViewController;
+			sourceTree = "<group>";
+		};
+		791B45561D4A3F0D0027C519 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				791B45521D4A3EE40027C519 /* CHWWorkModel.h */,
+				791B45531D4A3EE40027C519 /* CHWWorkModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		791B45571D4A40C60027C519 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				791B45581D4A40D40027C519 /* FMDatabase.h */,
+				791B45591D4A40D40027C519 /* FMDatabase.m */,
+				791B455A1D4A40D40027C519 /* FMDatabaseAdditions.h */,
+				791B455B1D4A40D40027C519 /* FMDatabaseAdditions.m */,
+				791B455C1D4A40D40027C519 /* FMDatabasePool.h */,
+				791B455D1D4A40D40027C519 /* FMDatabasePool.m */,
+				791B455E1D4A40D40027C519 /* FMDatabaseQueue.h */,
+				791B455F1D4A40D40027C519 /* FMDatabaseQueue.m */,
+				791B45601D4A40D40027C519 /* FMResultSet.h */,
+				791B45611D4A40D40027C519 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		791B45671D4A40DB0027C519 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				791B45681D4A40F40027C519 /* ContentDatabase.h */,
+				791B45691D4A40F40027C519 /* ContentDatabase.m */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				791B44F71D47AED10027C519 /* LaunchScreen.storyboard in Resources */,
+				791B453B1D4A3D7C0027C519 /* CHWTimeTableViewCell.xib in Resources */,
 				791B44F41D47AED10027C519 /* Assets.xcassets in Resources */,
 				791B44F21D47AED10027C519 /* Main.storyboard in Resources */,
 			);
@@ -270,9 +511,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791B452F1D4A3D330027C519 /* CHWSettingViewController.m in Sources */,
+				791B45621D4A40D40027C519 /* FMDatabase.m in Sources */,
+				791B451F1D4A3C0C0027C519 /* CHWViewController.m in Sources */,
+				791B45331D4A3D5D0027C519 /* CHWTimeLineViewController.m in Sources */,
+				791B45641D4A40D40027C519 /* FMDatabasePool.m in Sources */,
+				791B45271D4A3C710027C519 /* NSString+CompareDate.m in Sources */,
+				791B454D1D4A3EB00027C519 /* CHWWorkOffViewController.m in Sources */,
+				791B45411D4A3DE90027C519 /* ACTimeScroller.m in Sources */,
 				791B44EF1D47AED10027C519 /* ViewController.m in Sources */,
+				791B451E1D4A3C0C0027C519 /* CHWTabbarViewController.m in Sources */,
+				791B45361D4A3D6F0027C519 /* CHWTimeTableView.m in Sources */,
+				791B45231D4A3C3D0027C519 /* CHWContentViewController.m in Sources */,
+				791B452B1D4A3CFF0027C519 /* ContentModel.m in Sources */,
+				791B453A1D4A3D7C0027C519 /* CHWTimeTableViewCell.m in Sources */,
+				791B45481D4A3E450027C519 /* DCPathButton.m in Sources */,
 				791B44EC1D47AED10027C519 /* AppDelegate.m in Sources */,
+				791B45491D4A3E450027C519 /* DCPathItemButton.m in Sources */,
+				791B45661D4A40D40027C519 /* FMResultSet.m in Sources */,
+				791B45511D4A3ED80027C519 /* CHWWorkViewController.m in Sources */,
 				791B44E91D47AED10027C519 /* main.m in Sources */,
+				791B456A1D4A40F40027C519 /* ContentDatabase.m in Sources */,
+				791B45651D4A40D40027C519 /* FMDatabaseQueue.m in Sources */,
+				791B45541D4A3EE40027C519 /* CHWWorkModel.m in Sources */,
+				791B45631D4A40D40027C519 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +760,7 @@
 				791B45131D47AED10027C519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		791B45141D47AED10027C519 /* Build configuration list for PBXNativeTarget "overTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +769,7 @@
 				791B45161D47AED10027C519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		791B45171D47AED10027C519 /* Build configuration list for PBXNativeTarget "overTimeUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +778,7 @@
 				791B45191D47AED10027C519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
