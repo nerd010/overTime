@@ -38,6 +38,7 @@
 		791B456A1D4A40F40027C519 /* ContentDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45691D4A40F40027C519 /* ContentDatabase.m */; };
 		791B456C1D4A412F0027C519 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 791B456B1D4A412F0027C519 /* libsqlite3.tbd */; };
 		791B456F1D4A44970027C519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791B456D1D4A44970027C519 /* Main.storyboard */; };
+		EEC359AF837D89877CD4D381 /* libPods-overTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8CADB208ABF35CB6E88131 /* libPods-overTime.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57DAADA11CBF16FA99ADC5B9 /* Pods-overTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-overTime/Pods-overTime.debug.xcconfig"; sourceTree = "<group>"; };
 		791B44E41D47AED10027C519 /* overTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = overTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		791B44E81D47AED10027C519 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		791B44EA1D47AED10027C519 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +121,8 @@
 		791B456B1D4A412F0027C519 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		791B456E1D4A44970027C519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		791B45701D4A49970027C519 /* Overtime-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Overtime-prefix.pch"; sourceTree = "<group>"; };
+		A5BA767C7C835B38C8676EDC /* Pods-overTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-overTime/Pods-overTime.release.xcconfig"; sourceTree = "<group>"; };
+		BF8CADB208ABF35CB6E88131 /* libPods-overTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-overTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				791B456C1D4A412F0027C519 /* libsqlite3.tbd in Frameworks */,
+				EEC359AF837D89877CD4D381 /* libPods-overTime.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +160,8 @@
 				791B45001D47AED10027C519 /* overTimeTests */,
 				791B450B1D47AED10027C519 /* overTimeUITests */,
 				791B44E51D47AED10027C519 /* Products */,
+				B0553BF249539CA170058AE2 /* Pods */,
+				B4DC792CCC8DD06CA8643AF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -382,6 +389,23 @@
 			name = Database;
 			sourceTree = "<group>";
 		};
+		B0553BF249539CA170058AE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57DAADA11CBF16FA99ADC5B9 /* Pods-overTime.debug.xcconfig */,
+				A5BA767C7C835B38C8676EDC /* Pods-overTime.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B4DC792CCC8DD06CA8643AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF8CADB208ABF35CB6E88131 /* libPods-overTime.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -389,9 +413,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 791B45111D47AED10027C519 /* Build configuration list for PBXNativeTarget "overTime" */;
 			buildPhases = (
+				ED8A622C1C7F30B489DFD2DC /* [CP] Check Pods Manifest.lock */,
 				791B44E01D47AED10027C519 /* Sources */,
 				791B44E11D47AED10027C519 /* Frameworks */,
 				791B44E21D47AED10027C519 /* Resources */,
+				1FF63924D0A422FCB20BC91B /* [CP] Embed Pods Frameworks */,
+				222FCCAD79FA7FC6AB5E25D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -507,6 +534,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FF63924D0A422FCB20BC91B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-overTime/Pods-overTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		222FCCAD79FA7FC6AB5E25D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-overTime/Pods-overTime-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED8A622C1C7F30B489DFD2DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		791B44E01D47AED10027C519 /* Sources */ = {
@@ -677,6 +752,7 @@
 		};
 		791B45121D47AED10027C519 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57DAADA11CBF16FA99ADC5B9 /* Pods-overTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "/Users/Richard/Documents/Developer/overTime/overTime/Overtime-prefix.pch";
@@ -689,6 +765,7 @@
 		};
 		791B45131D47AED10027C519 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5BA767C7C835B38C8676EDC /* Pods-overTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "/Users/Richard/Documents/Developer/overTime/overTime/Overtime-prefix.pch";

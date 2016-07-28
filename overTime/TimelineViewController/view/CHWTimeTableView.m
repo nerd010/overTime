@@ -66,7 +66,7 @@ NSString * const PSTableViewCellIdentifier = @"PSTableViewCellIdentifier";
 //        }
         self.delegate = self;
         self.dataSource = self;
-        self.backgroundColor = [UIColor yellowColor];
+//        self.backgroundColor = [UIColor yellowColor];
 //        [self setupDatasource];
     }
     return self;

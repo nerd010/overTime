@@ -24,9 +24,13 @@
 
 @implementation CHWTimeLineViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+
     self.timeTableView.backgroundColor = [UIColor whiteColor];
+    self.timeTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.timeTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.title = @"timeline";
 }
 
@@ -36,7 +40,6 @@
 }
 
 #pragma mark - UITableViewDataSource Methods
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
