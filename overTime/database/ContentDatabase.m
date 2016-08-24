@@ -42,7 +42,7 @@ static ContentDatabase *sharedManager;
         NSLog(@"数据库[%@]打开失败",writingDBPath);
         return;
     }
-    NSString *creatSQL = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS content(dateString TEXT, startTimeString TEXT, workTimeString TEXT, contentString TEXT, addressString TEXT ,stopTimeString TEXT, userNameString TEXT, companyString TEXT, overTimeString TEXT)"];
+    NSString *creatSQL = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS content(id integer PRIMARY KEY AUTOINCREMENT, dateString TEXT, startTimeString TEXT, workTimeString TEXT, contentString TEXT, addressString TEXT ,stopTimeString TEXT, userNameString TEXT, companyString TEXT, overTimeString TEXT)"];
     ret = [db executeUpdate:creatSQL];
     if (!ret)
     {

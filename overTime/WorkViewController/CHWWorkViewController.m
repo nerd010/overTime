@@ -38,7 +38,8 @@ static CHWWorkViewController *sharedManager;
     return sharedManager;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.title = @"working";
@@ -53,8 +54,11 @@ static CHWWorkViewController *sharedManager;
 {
     [super viewWillDisappear:animated];
     
-    [_startTimer invalidate];
-    _startTimer = nil;
+    if (_startTimer)
+    {
+        [_startTimer invalidate];
+        _startTimer = nil;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

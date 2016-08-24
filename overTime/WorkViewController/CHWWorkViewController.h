@@ -15,4 +15,5 @@
 @property (nonatomic,strong) UILabel *workDurationLabel;
 
 + (CHWWorkViewController *)sharedManager;
+
 @end

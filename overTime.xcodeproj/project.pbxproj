@@ -33,6 +33,8 @@
 		791B456A1D4A40F40027C519 /* ContentDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 791B45691D4A40F40027C519 /* ContentDatabase.m */; };
 		791B456C1D4A412F0027C519 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 791B456B1D4A412F0027C519 /* libsqlite3.tbd */; };
 		791B456F1D4A44970027C519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791B456D1D4A44970027C519 /* Main.storyboard */; };
+		79CA7C1F1D6DE171000F91CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CA7C1E1D6DE171000F91CD /* CoreLocation.framework */; };
+		79CA7C211D6DE2D3000F91CD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CA7C201D6DE2D3000F91CD /* MapKit.framework */; };
 		EEC359AF837D89877CD4D381 /* libPods-overTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8CADB208ABF35CB6E88131 /* libPods-overTime.a */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +108,8 @@
 		791B456B1D4A412F0027C519 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		791B456E1D4A44970027C519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		791B45701D4A49970027C519 /* Overtime-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Overtime-prefix.pch"; sourceTree = "<group>"; };
+		79CA7C1E1D6DE171000F91CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		79CA7C201D6DE2D3000F91CD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A5BA767C7C835B38C8676EDC /* Pods-overTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-overTime/Pods-overTime.release.xcconfig"; sourceTree = "<group>"; };
 		BF8CADB208ABF35CB6E88131 /* libPods-overTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-overTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CA7C211D6DE2D3000F91CD /* MapKit.framework in Frameworks */,
+				79CA7C1F1D6DE171000F91CD /* CoreLocation.framework in Frameworks */,
 				791B456C1D4A412F0027C519 /* libsqlite3.tbd in Frameworks */,
 				EEC359AF837D89877CD4D381 /* libPods-overTime.a in Frameworks */,
 			);
@@ -368,6 +374,8 @@
 		B4DC792CCC8DD06CA8643AF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79CA7C201D6DE2D3000F91CD /* MapKit.framework */,
+				79CA7C1E1D6DE171000F91CD /* CoreLocation.framework */,
 				BF8CADB208ABF35CB6E88131 /* libPods-overTime.a */,
 			);
 			name = Frameworks;
@@ -443,6 +451,7 @@
 				TargetAttributes = {
 					791B44E31D47AED10027C519 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = AAHU74A457;
 					};
 					791B44FC1D47AED10027C519 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -717,11 +726,14 @@
 			baseConfigurationReference = 57DAADA11CBF16FA99ADC5B9 /* Pods-overTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "/Users/Richard/Documents/Developer/overTime/overTime/Overtime-prefix.pch";
 				INFOPLIST_FILE = overTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chw.overTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -730,11 +742,14 @@
 			baseConfigurationReference = A5BA767C7C835B38C8676EDC /* Pods-overTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "/Users/Richard/Documents/Developer/overTime/overTime/Overtime-prefix.pch";
 				INFOPLIST_FILE = overTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chw.overTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -22,6 +22,7 @@
 @property (nonatomic,strong) CLLocationManager *locationManager;
 
 @property (nonatomic,copy) NSString *inputContent;
+@property (nonatomic, strong) UITextView *contentTV;
 
 @end
 
@@ -48,15 +49,15 @@
 - (void)initContentView
 {
     int originX = [UIScreen mainScreen].bounds.size.width/2 - 250/2;
-    UITextView *contentTV = [[UITextView alloc] initWithFrame:CGRectMake(originX, 100, 250, 260)];
-    contentTV.delegate = self;
-    contentTV.font = [UIFont systemFontOfSize:15];
-    contentTV.textColor = [UIColor blackColor];
-    contentTV.layer.cornerRadius = 3.0f;
-    contentTV.layer.masksToBounds = YES;
-    contentTV.layer.borderWidth = 2.0f;
-    contentTV.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-    [self.view addSubview:contentTV];
+    _contentTV = [[UITextView alloc] initWithFrame:CGRectMake(originX, 100, 250, 260)];
+    _contentTV.delegate = self;
+    _contentTV.font = [UIFont systemFontOfSize:15];
+    _contentTV.textColor = [UIColor blackColor];
+    _contentTV.layer.cornerRadius = 3.0f;
+    _contentTV.layer.masksToBounds = YES;
+    _contentTV.layer.borderWidth = 2.0f;
+    _contentTV.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    [self.view addSubview:_contentTV];
     
     int btnOriginX = self.view.frame.size.width / 2 - 200 / 2;
     UIButton *enterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -86,6 +87,23 @@
 
 - (void)saveContent:(UIButton *)button
 {
+    if ([_contentTV.text isEqualToString:@""] || nil == _contentTV.text)
+    {
+        __weak typeof (self) weakSelf = self;
+        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"您还没有输入内容，请确认跳转" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            CHWViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarViewController"];
+            [weakSelf presentViewController:VC animated:YES completion:nil];
+        }];
+        
+        [alertC addAction:cancelAction];
+        [alertC addAction:defaultAction];
+        [self presentViewController:alertC animated:YES completion:nil];
+    }
+    
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSString *startTimeStr = [ud objectForKey:@"startTimeString"];
     
@@ -115,6 +133,10 @@
     NSLog(@"saveContent");
 }
 
+- (void)addAction:(UIAlertAction *)action
+{
+    
+}
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
@@ -195,25 +217,23 @@
 - (IBAction)clickedLocationButton:(id)sender
 {
     UIButton *button = (UIButton *)sender;
-    if (button.tag == 100)
+    if (100 == button.tag)
     {
-        button.titleLabel.text = @"正在获取当前位置";
+//        button.titleLabel.text = @"正在获取当前位置";
+        [button setTitle:@"正在获取当前位置" forState:UIControlStateNormal];
     }
     _locationManager = [[CLLocationManager alloc] init];
-    if (![CLLocationManager locationServicesEnabled]) {
+    //设置代理
+    _locationManager.delegate=self;
+    if (![CLLocationManager locationServicesEnabled])
+    {
         NSLog(@"定位服务当前可能尚未打开，请设置打开！");
         return;
     }
-    
-    //如果没有授权则请求用户授权
-    if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusNotDetermined)
+    else
     {
-        [_locationManager requestWhenInUseAuthorization];
-    }
-    else if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusAuthorizedWhenInUse)
-    {
-        //设置代理
-        _locationManager.delegate=self;
+        [_locationManager requestLocation];
+      
         //设置定位精度
         _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
         //定位频率,每隔多少米定位一次
@@ -223,22 +243,50 @@
         [_locationManager startUpdatingLocation];
     }
     
-    if ([[[UIDevice currentDevice] systemVersion] doubleValue] >=8.0)
+    //如果没有授权则请求用户授权
+    if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusNotDetermined)
+    {
+        [_locationManager requestWhenInUseAuthorization];
+
+    }
+    else if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusAuthorizedWhenInUse)
+    {
+        //设置代理
+//        _locationManager.delegate=self;
+        //设置定位精度
+        _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+        //定位频率,每隔多少米定位一次
+        CLLocationDistance distance=10.0;//十米定位一次
+        _locationManager.distanceFilter=distance;
+        //启动跟踪定位
+        [_locationManager startUpdatingLocation];
+    }
+    
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue] >=9.0)
+    {
+        _locationManager.allowsBackgroundLocationUpdates = YES;
+    }
+    else if ([[[UIDevice currentDevice] systemVersion] doubleValue] >=8.0)
     {
         [_locationManager requestWhenInUseAuthorization];
     }
-//    [_locationManager startUpdatingLocation];
+    [_locationManager startUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     switch (status) {
         case kCLAuthorizationStatusNotDetermined:
-            if ([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {                [_locationManager requestWhenInUseAuthorization];
+            if ([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+            {
+                [_locationManager requestWhenInUseAuthorization];
             }
             break;
         case kCLAuthorizationStatusAuthorizedWhenInUse:
-            if ([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {                [_locationManager requestWhenInUseAuthorization];
+            if ([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+            {
+                [_locationManager requestWhenInUseAuthorization];
             }
+            break;
         default:            
             break;   
     }
@@ -286,7 +334,12 @@
 }
 
 //ios6 以后
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+//-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+//{
+//   
+//}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
     //此处locations存储了持续更新的位置坐标值，取最后一个值为最新位置，如果不想让其持续更新位置，则在此方法中获取到一个值之后让locationManager stopUpdatingLocation
     CLLocation *currentLocation = [locations lastObject];
