@@ -39,7 +39,7 @@
 
 @implementation ACTimeScroller
 
-- (id)initWithDelegate:(id<ACTimeScrollerDelegate>)delegate
+- (instancetype)initWithDelegate:(id<ACTimeScrollerDelegate>)delegate
 {
     UIImage *background = [[UIImage imageNamed:@"timescroll_pointer"] resizableImageWithCapInsets:UIEdgeInsetsMake(0.0f, 35.0f, 0.0f, 10.0f)];
     
